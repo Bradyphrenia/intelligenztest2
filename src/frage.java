@@ -1,32 +1,41 @@
 public class frage {
 
 
-    static Boolean joker_status = true; //Klassenvariablen
-    static int punkte = 0;
-    static int nummer = 0;
+    static Boolean joker_status = true; //Klassenvariablen -> Joker noch vorhanden?
+    static int punkte = 0;  // Klassenvariable -> Punktekonto
+    static int nummer = 0;  // -> aktuelle Frage Nr.
 
-    private String antwort_a; //Instanzvariablen
-    private String antwort_b;
-    private String antwort_c;
-    private String antwort_d;
-    private String frage;
-    private int position;
-    private String[] ausgabe = new String[5];
-    private int eingabe_position;
+//    private String antwort_a; //Instanzvariablen -> Antworten a bis d
+//    private String antwort_b;
+//    private String antwort_c;
+//    private String antwort_d;
+//    private String frage;  // -> Frage
+    private int position;  // -> Position der richtigen Antwort
+    private String[] ausgabe = new String[5]; // -> String Array für Manipulation der Ausgabe (Joker)
+    private int eingabe_position;  // -> Position der eingegebenen Antwort
 
-    public frage(String _frage, String a, String b, String c, String d, int position) { //Konstruktor
-        this.antwort_a = a;
-        this.antwort_b = b;
-        this.antwort_c = c;
-        this.antwort_d = d;
-        this.frage = _frage;
+    public frage(String frage, String a, String b, String c, String d, int position) { //Konstruktor
+//        this.antwort_a = a;
+//        this.antwort_b = b;
+//        this.antwort_c = c;
+//        this.antwort_d = d;
+//        this.frage = frage;
         this.position = position;
-        nummer++;
-        this.ausgabe[0] = this.frage;
-        this.ausgabe[1] = this.antwort_a;
-        this.ausgabe[2] = this.antwort_b;
-        this.ausgabe[3] = this.antwort_c;
-        this.ausgabe[4] = this.antwort_d;
+        nummer++; // Zählen der generierten Instanzen
+//        this.ausgabe[0] = this.frage;
+//        this.ausgabe[1] = this.antwort_a; // initialisieren der Instanzvariablen
+//        this.ausgabe[2] = this.antwort_b;
+//        this.ausgabe[3] = this.antwort_c;
+//        this.ausgabe[4] = this.antwort_d;
+
+        this.ausgabe[0] = frage;
+        this.ausgabe[1] = a; // initialisieren der Instanzvariablen
+        this.ausgabe[2] = b;
+        this.ausgabe[3] = c;
+        this.ausgabe[4] = d;
+
+
+
     }
 
     public String[] gibAusgabe() {
