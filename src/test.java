@@ -6,7 +6,7 @@ public class test {
         System.out.println(frage.gib_Nummmer());
 
         nummer1.joker(false);
-        anzeige = nummer1.aufruf();
+        anzeige = nummer1.gibAusgabe();
         System.out.println(anzeige[0]);
         if (nummer1.gib_Jokerstatus()) {
             System.out.println("Es gibt noch einen Joker!");
@@ -23,7 +23,7 @@ public class test {
         System.out.println(frage.gib_Nummmer());
 
         nummer2.joker(false);
-        anzeige = nummer2.aufruf();
+        anzeige = nummer2.gibAusgabe();
         System.out.println(anzeige[0]);
         if (nummer2.gib_Jokerstatus()) {
             System.out.println("Es gibt noch einen Joker!");
@@ -41,8 +41,9 @@ public class test {
         System.out.println(frage.gib_Nummmer());
 
         nummer3.joker(false);
-        anzeige = nummer3.aufruf();
-        System.out.println(anzeige[0]);
+        anzeige = nummer3.gibAusgabe();
+        frage.gibAufBildschirmAus(nummer3.gibAusgabe());
+
         if (nummer3.gib_Jokerstatus()) {
             System.out.println("Es gibt noch einen Joker!");
         } else {

@@ -29,8 +29,16 @@ public class frage {
         this.ausgabe[4] = this.antwort_d;
     }
 
-    public String[] aufruf() {
+    public String[] gibAusgabe() {
         return this.ausgabe;
+    }
+
+    static void gibAufBildschirmAus(String[] ausgabe) {  // Klassenmethode
+        String[] anz = {"Frage: ", "a: ", "b: ", "c: ", "d: "};
+        for (int i = 0; i <= 4; i++) {
+            System.out.print(anz[i]);
+            System.out.println(ausgabe[i]);
+        }
     }
 
     public void joker(boolean nimmt_joker) {
@@ -67,10 +75,9 @@ public class frage {
         }
     }
 
-    static void auswertung() {
+    static void auswertung() {  // Klassenmethode
         String bewertung = "Du hast " + Integer.toString(punkte) + " von 10 möglichen Punkten!";
         System.out.println(bewertung);
-
         if (punkte >= 9) {
             System.out.println("Du bist sehr intelligent!");
         } else if (punkte <= 9 && punkte >= 6) {
@@ -80,11 +87,11 @@ public class frage {
         }
     }
 
-    static boolean gib_Jokerstatus() {
+    static boolean gib_Jokerstatus() {  // Klassenmethode
         return joker_status;
     }
 
-    static int gib_Nummmer() {
+    static int gib_Nummmer() {  // Klassenmethode
         return nummer;
     }
 }
