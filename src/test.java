@@ -1,10 +1,11 @@
 public class test {
     public static void main(String[] args) {
-        String[] anzeige = new String[5];
+        String[] anzeige = new String[5]; //String-Array für Ausgabe
+
+
         frage nummer1 = new frage("Wie ist die Augenfarbe von Üja?", "blau", "grün", "braun", "bunt", 2);
         System.out.print("Nummer: ");
         System.out.println(frage.gib_Nummmer());
-
         nummer1.joker(false);
         anzeige = nummer1.gibAusgabe();
         System.out.println(anzeige[0]);
@@ -13,7 +14,6 @@ public class test {
         } else {
             System.out.println("Joker verbraucht!");
         }
-
         nummer1.evaluieren("b");
         frage.auswertung();
 
@@ -21,7 +21,6 @@ public class test {
         frage nummer2 = new frage("Wie ist die Augenfarbe von Mama?", "blau", "grün", "braun", "bunt", 2);
         System.out.print("Nummer: ");
         System.out.println(frage.gib_Nummmer());
-
         nummer2.joker(false);
         anzeige = nummer2.gibAusgabe();
         System.out.println(anzeige[0]);
@@ -30,29 +29,22 @@ public class test {
         } else {
             System.out.println("Joker verbraucht!");
         }
-
         nummer2.evaluieren("b");
         frage.auswertung();
 
 
         frage nummer3 = new frage("Wie ist die Augenfarbe von Papa?", "blau", "grün", "braun", "bunt", 1);
-
         System.out.print("Nummer: ");
         System.out.println(frage.gib_Nummmer());
-
         nummer3.joker(false);
-        anzeige = nummer3.gibAusgabe();
+        nummer3.gibAusgabe();
         frage.gibAufBildschirmAus(nummer3.gibAusgabe());
-
         if (nummer3.gib_Jokerstatus()) {
             System.out.println("Es gibt noch einen Joker!");
         } else {
             System.out.println("Joker verbraucht!");
         }
-
-        nummer3.evaluieren("a");
+        nummer3.evaluieren("b");
         frage.auswertung();
-
-
     }
 }

@@ -35,7 +35,7 @@ public class frage {
         return;
     }
 
-    public boolean evaluieren(String eingabe) {
+    public boolean evaluieren(String eingabe) { //Instanzmethode -> Umwandlung Eingabe in Position
         switch (eingabe) {
             case "a":
                 this.eingabe_position = 1;
@@ -51,10 +51,18 @@ public class frage {
                 break;
         }
 
-        if (this.eingabe_position == this.position) {
+
+        System.out.print("Ihre Antwort ist: ");
+        System.out.println(ausgabe[eingabe_position]);
+        System.out.print("Die richtige Antwort ist: ");
+        System.out.println(ausgabe[position]);
+
+
+
+        if (this.eingabe_position == this.position) {  // Eingabe richtig?
             punkte++;
-            System.out.println(ausgabe[position]);
-            System.out.println("Richtig!");
+
+           System.out.println("Richtig!");
             return true;
         } else {
             System.out.println("Falsch!");
@@ -62,7 +70,7 @@ public class frage {
         }
     }
 
-    static void auswertung() {  // Klassenmethode
+    static void auswertung() {  // Klassenmethode -> Auswertung des Tests
         String bewertung = "Du hast " + Integer.toString(punkte) + " von 10 möglichen Punkten!";
         System.out.println(bewertung);
         if (punkte >= 9) {
@@ -74,15 +82,11 @@ public class frage {
         }
     }
 
-    static boolean gib_Jokerstatus() {  // Klassenmethode
+    static boolean gib_Jokerstatus() {  // Klassenmethode -> Joker noch vorhanden?
         return joker_status;
     }
 
-    static int gib_Nummmer() {  // Klassenmethode
+    static int gib_Nummmer() {  // Klassenmethode -> Welche Frage?
         return nummer;
     }
 }
-
-
-
-
